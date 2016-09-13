@@ -1,8 +1,10 @@
+import serverconfig
+
 class IndoorPersonTrackerAPI:
 
     def __init__(self):
         from suds.client import Client
-        url = 'http://10.0.0.8:8080/WebServices/iptwebservice?wsdl'
+        url = 'http://{}:{}/WebServices/iptwebservice?wsdl'.format(serverconfig.IP, serverconfig.PORT)
         self.client = Client(url)
 
     def register(self, identifier):
