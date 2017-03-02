@@ -24,3 +24,6 @@ class IndoorPersonTrackerAPI:
 
     def updateIdentificationCustomPFD(self, identifier, personName, probFalseDetection):
         self.client.service.updateIdentificationCustomPFD(identifier, personName, probFalseDetection)
+		
+	def getRepresentativeRole(self, roomNum, mode):
+		self.client.service.getRepresentativeRole(roomNum, mode)
